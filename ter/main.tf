@@ -16,7 +16,7 @@ resource "aws_instance" "task1" {
   }
 }
 resource "aws_security_group" "secgrp" {
-  name        = "secgrp"
+  name        = "secgrp1"
   description = "Allow inbound and outbound traffic"
   vpc_id      = "${var.vpc}"
   ingress {
