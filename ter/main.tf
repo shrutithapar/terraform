@@ -2,7 +2,7 @@ provider "aws" {
   region = "us-east-2"
 }
 resource "aws_key_pair" "deployer" {
-  key_name = "samplekey"
+  key_name = "samplekey1"
   public_key = "${file("/home/ec2-user/.ssh/id_rsa.pub")}"
 }
 resource "aws_instance" "task1" {
@@ -16,7 +16,7 @@ resource "aws_instance" "task1" {
   }
 }
 resource "aws_security_group" "secgrp" {
-  name        = "secgrp1"
+  name        = "secgrp11"
   description = "Allow inbound and outbound traffic"
   vpc_id      = "${var.vpc}"
   ingress {
